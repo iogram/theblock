@@ -11,39 +11,70 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div class="container main-page">
+    <div class="row transp ">
+        <!-- micro hero unit-->
+        <div class="span12 transp">
+            
+                <h1> Some page title </h1>
+                <p> This is a website. </p>
+                
+            
+           
+        </div>
+        <!-- span12 -->
+    </div> <!-- row -->
+</div>
+
+<!--<div id="nav-wrapper">-->
+  <div id="nav" class="navbar navbar-default" data-spy="affix" data-offset="200">
+    <div class="container-fluid">
+       <div class="navbar-header">
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="nav-link"><a href="#">About</a></li>
+            <li></li>
+            <li></li>
+            <li class="nav-link"><a href="#">Blog</a></li>
+            <li></li>
+            <li></li>
+            <li class="nav-link"><a href="#">Contact Us</a></li>
+            <li></li>
+            <li></li>
+            <li class="nav-link"><a href="#">Gallery</a></li>
+          </ul>
+        </div> <!-- container -->
+      </div> <!-- navbar-inner -->
+    </div> <!-- navbar -->
+  </div>
+<div class="container">
+  <div class = "row">
+    <div class="well col-md-3">
+          <h2>some lorem ipsum for scrolling:</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, numquam deleniti accusantium. Nihil, rerum, quod repudiandae a accusantium expedita molestias aliquam fuga officiis in saepe nesciunt libero vitae autem odit.</p>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Blog</a></li>
-        
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Contact Us</a></li>
-        
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
+  
+    <div class="well col-md-3 col-md-offset-1">
+          <h2>some lorem ipsum for scrolling:</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, numquam deleniti accusantium. Nihil, rerum, quod repudiandae a accusantium expedita molestias aliquam fuga officiis in saepe nesciunt libero vitae autem odit.</p>
+    </div>
+    
+    <div class="well col-md-3 col-md-offset-1">
+          <h2>some lorem ipsum for scrolling:</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, numquam deleniti accusantium. Nihil, rerum, quod repudiandae a accusantium expedita molestias aliquam fuga officiis in saepe nesciunt libero vitae autem odit.</p>
+    </div>
+  </div>
+</div>
+<!--</div>-->
 <%= yield %>
+
+
 
 </body>
 </html>

@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+function main(){
+    
+    // $(function() {
+    //     $('#nav-wrapper').height($("#nav").height());
+        
+    //     $('#nav').affix({
+    //         offset: { top: $('#nav').offset().top }
+    //     });
+    // });
+    
+    
+    $('.nav-link').hover(function(){
+        $(this).toggleClass('active');
+    });
+
+}
+
+$(document).ready(main);
