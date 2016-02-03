@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/contact' => 'contact#contact'
+  get '/about' => 'about#about'
+  get '/index' => 'home#index'
   resources :articles
   root 'home#index'
 
