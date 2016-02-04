@@ -3,13 +3,18 @@
  * Copyright 2014 Start Bootstrap
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
+.borderTop{
+  border-top: 1px solid grey;
+}
+
 #mainbg {
   background: image-url('home-bg.jpg');
   
-  // background-repeat: no-repeat;
-  // background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 body {
+  padding-top: 100px;
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;

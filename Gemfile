@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # use bootstrap library for styles
 gem 'bootstrap-sass', '3.3.1'
 # use font awesome library for icons
-gem 'font-awesome-sass', '4.2.0'
+gem 'font-awesome-sass', '4.5.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -25,6 +25,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# Use for fonts and icons
 
 
 # Use ActiveModel has_secure_password
