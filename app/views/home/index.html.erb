@@ -1,10 +1,8 @@
-</br>
-</br>
-</br>
-<div class="intro-header main-page-bg col-md-10 col-md-offset-1" id="mainbg">
+<!--Header-->
+<header class="intro-header" id="mainbg" >
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
                     <h1>The Block</h1>
                     <hr class="small">
@@ -13,63 +11,41 @@
             </div>
         </div>
     </div>
-</div>
+</header>
+<!--Main Content-->
 <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
+    <div class="row">
+        <div class=" col-md-10 col-md-offset-2" >
+            <div class="container col-md-10">
+            <h1 class="text-center">Lastest News</h1>
+            <hr>
             </div>
+            <% @articles.each do |article| %>
+            <div class = "container col-md-10">
+                <%= link_to(article) do %>
+                <div class="post-preview media">
+                    <div class=" media-left media-middle">
+                        <%= image_tag("PARK.jpg", width: '210', height: '210', class: "media-object") %>
+                    </div>
+                    <div class="media-body">
+                        <h2 class = "post-title media-heading"><%= article.title %></h2>
+                        <h3 class="post-subtitle">add subtitle in db</h3>
+                        <p class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></p>
+                    </div>
+                </div>
+                <% end %>
+                 <hr>
+            </div>
+        <% end %>
+        </div>
+<!--Pager-->
+        <div class="col-md-8 col-md-offset-2" style="padding-right: 0px" >
+            <ul class="pager">
+                <li class="next" >
+                  <%= link_to "Older Posts", articles_path, class: 'nav-link', method: :get %>
+                </li>
+            </ul>
         </div>
     </div>
-
-    <hr>
+</div>
+  

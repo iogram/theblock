@@ -3,18 +3,51 @@
  * Copyright 2014 Start Bootstrap
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
-.borderTop{
-  border-top: 1px solid grey;
+ .form-control{
+  // color: #eeeeee;
+ }
+ .borderTop{
+  border-top: 1px solid #eeeeee;
 }
-
-#mainbg {
-  background: image-url('home-bg.jpg');
-  
+.borderBottom{
+  border-bottom: 1px solid #eeeeee;
+}
+#overbs-hf:hover,
+#overbs-hf:focus {
+  text-decoration: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+#postbg {
+  background: image-url('post-bg.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-attachment: scroll;
+  // background-size: 100%;
+}
+#mainbg {
+  background: image-url('newspaper.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-size: 100%;
+}
+#aboutbg {
+  background: image-url('about-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  // background-size: 100%;
+}
+#contactbg {
+  background: image-url('contact-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  // background-size: 100%;
 }
 body {
-  padding-top: 100px;
+  // padding-top: 100px;
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
@@ -38,14 +71,6 @@ h6 {
 a {
   color: #404040;
 }
-a:hover,
-a:focus {
-  color: #0085a1;
-}
-a img:hover,
-a img:focus {
-  cursor: zoom-in;
-}
 blockquote {
   color: #808080;
   font-style: italic;
@@ -55,6 +80,13 @@ hr.small {
   margin: 15px auto;
   border-width: 4px;
   border-color: white;
+}
+.navbar{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 .navbar-custom {
   position: absolute;
@@ -76,8 +108,10 @@ hr.small {
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;
+    background-color: transparent;
     border-bottom: 1px solid transparent;
   }
+
   .navbar-custom .navbar-brand {
     color: white;
     padding: 20px;
@@ -85,6 +119,7 @@ hr.small {
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
     color: rgba(255, 255, 255, 0.8);
+    
   }
   .navbar-custom .nav li a {
     color: white;
@@ -93,6 +128,7 @@ hr.small {
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
     color: rgba(255, 255, 255, 0.8);
+    
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -291,6 +327,8 @@ footer .copyright {
   margin-bottom: 0;
   padding-bottom: 0.5em;
   border-bottom: 1px solid #eeeeee;
+ 
+  
 }
 .floating-label-form-group input,
 .floating-label-form-group textarea {
@@ -332,9 +370,9 @@ footer .copyright {
 .floating-label-form-group-with-focus label {
   color: #0085a1;
 }
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eeeeee;
-}
+// form .row:first-child .floating-label-form-group {
+//   border-top: 1px solid #eeeeee;
+// }
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -343,6 +381,7 @@ form .row:first-child .floating-label-form-group {
   letter-spacing: 1px;
   border-radius: 0;
   padding: 15px 25px;
+  background-image: image-url("");
 }
 .btn-lg {
   font-size: 16px;
@@ -358,7 +397,7 @@ form .row:first-child .floating-label-form-group {
   margin: 20px 0 0;
 }
 .pager li > a,
-.pager li > span {
+.pager li > span{
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -368,8 +407,22 @@ form .row:first-child .floating-label-form-group {
   background-color: white;
   border-radius: 0;
 }
+
+#pagerIndex{
+font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  background-color: white;
+  border-radius: 0;
+  color: white;
+  background-color: #0085a1;
+  border: 1px solid #0085a1;
+}
 .pager li > a:hover,
-.pager li > a:focus {
+.pager li > a:focus{
   color: white;
   background-color: #0085a1;
   border: 1px solid #0085a1;

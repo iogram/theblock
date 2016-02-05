@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
         
     def index
         @articles = Article.all
+        @article = Article.last.created_at
     end
   
     def show
