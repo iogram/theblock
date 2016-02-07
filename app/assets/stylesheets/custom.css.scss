@@ -15,6 +15,13 @@
 // .subheading{
 //   font-size: 20px;
 // }
+hr{
+   clear: both;
+}
+.btn-right{
+  text-align: right;
+  vertical-align: bottom;
+}
  .border{
   border: 1px solid red;
  }
@@ -282,6 +289,7 @@ hr.small {
   padding-left: 10px;
   padding-bottom: 10px;
   vertical-align: top;
+  text-align: left;
   overflow: hidden;
 }
 .post-subtitle {
@@ -295,6 +303,7 @@ hr.small {
   font-style: italic;
   padding-left: 10px;
   vertical-align: bottom;
+  text-align: left;
 }
 .post-meta > a {
   text-decoration: none;
@@ -397,6 +406,7 @@ footer .copyright {
   letter-spacing: 1px;
   border-radius: 0;
   padding: 15px 25px;
+  margin-bottom: 15px;
   background-image: image-url("");
 }
 .btn-lg {

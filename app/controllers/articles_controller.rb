@@ -1,8 +1,11 @@
 class ArticlesController < ApplicationController
         
     def index
+        
         @articles = Article.all
-        @article = Article.last.created_at
+        if !@articles.first.title.empty?
+            @article = Article.last.created_at
+        end
     end
   
     def show

@@ -6,59 +6,62 @@
                     <div class="post-heading">
                         <h1>News</h1>
                         <h2 class="subheading">All your local news and stuff</h2>
-                        <span class="meta">Last updated on <%= @article.strftime('%a, %b %d') %> </span>
+                        <% if !@articles.first.title.empty? -%>
+                        <h3 class="meta">Last updated on <%= @article.strftime('%a, %b %d') -%></h3>
+                        <% end -%>
+                       
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-                <div class=" col-md-10 col-md-offset-2" >
-                    <% @articles.each do |article| %>
-                    <div class = "container col-md-10">
-                        <%= link_to(article) do %>
-                        <table class="post-preview">
-                            <tr>
-                              <th rowspan="2"><%= image_tag("PARK.jpg", width: '150', height: '150', class: "media-object", style: "border: 1px solid #eeeeee") %></th>
-                              <td class="post-title"><%= article.title %></td>
-                            </tr>
-                            <tr>
-                              <td class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></td>
-                            </tr>
-                        </table>
-                        <% end %>
-                        <div class="container" style="padding-left: 0px">
-                            <ul class ="pager">
-                                <li class="btn-group ">
-                                    <%= link_to 'Show', article_path(article), class:'btn btn-defaul', style:"padding:5px 5px" %>
-                                </li>
-                                <li class="btn-group ">
-                                    <%= link_to 'Edit', edit_article_path(article), class:'btn btn-defaul', style:"padding:5px 5px" %>
-                                </li>
-                                <li class="btn-group ">
-                                    <%= link_to 'Destroy', article_path(article), class:'btn btn-defaul', style:"padding:5px 5px",
-                                                    method: :delete,
-                                                    data: { confirm: 'Are you sure?' } %>
-                                </li>
-                            </ul>
-                        </div>
-                         <hr>
+<div class="container">
+    <div class="row">
+        <div class="container-fluid" >
+            <div class="col-md-8 col-md-offset-2 ">
+                <h1 class="text-center">Lastest News</h1>
+                <hr>
+            </div>
+            <% if !@articles.first.title.empty? -%>
+                <% @articles.each do |article| -%>
+                    <div class = "container col-md-8 col-md-offset-2 ">
+                        <%= link_to(article) do -%>
+                            <table class="post-preview">
+                                <tr>
+                                  <th rowspan="2"><%= image_tag("PARK.jpg", width: '150', height: '150', class: "media-object", style: "border: 1px solid #eeeeee") -%></th>
+                                  <td class="post-title"><%= article.title -%></td>
+                                </tr>
+                                <tr>
+                                  <td class="post-meta">Posted by <%= article.author -%> on <%= article.created_at.strftime('%a, %b %d') -%></td>
+                                </tr>
+                            </table>
+                        <% end -%>
+                        <hr>   
                     </div>
-                <% end %>
+                
+                    <div class="container col-md-8 col-md-offset-2 ">
+                        <% if user_signed_in? -%>
+                            <%= link_to 'Show', article_path(article), class:'btn btn-default', style:"padding:5px 5px" -%>
+                            <%= link_to 'Edit', edit_article_path(article), class:'btn btn-default', style:"padding:5px 5px" -%>
+                            <%= link_to 'Destroy', article_path(article), class:'btn btn-default', style:"padding:5px 5px",
+                                                                        method: :delete,
+                                                                        data: { confirm: 'Are you sure?' } -%>
+                        <% end -%>
+                    </div>
+                <% end -%>
+        
+            <% end -%>
+        
+<!--Pager-->
+            <div class="col-md-8 col-md-offset-2 " style="padding-right: 0px" >
+                <div class= "">
+                     <% if user_signed_in? -%>
+                        <%= link_to 'New article', new_article_path, class:'btn btn-default' -%>
+                    <% end -%>
+                    <%= link_to "Older Posts", articles_path, class: 'btn btn-default', method: :get -%>
                 </div>
-                <!-- Pager -->
-                 <div class="col-md-8 col-md-offset-2" style="padding-right: 0px" >
-                <ul class="pager">
-                    <li class="btn-group next">
-                        <%= link_to 'Back', articles_path, class:'btn btn-default', method: :get %>
-                    </li>
-                    <li class="btn-group next">  
-                        <%= link_to 'New article', new_article_path, class:'btn btn-default' %>
-                    </li>
-                </ul>
-             </div>
-        </div>
-    </div>
-<hr>
+            </div>
+         </div>
+     </div>
+ </div>
