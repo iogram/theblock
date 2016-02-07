@@ -1,20 +1,13 @@
 
-// .post-title {
-//   font-size: 12px;
-// }
-// .post-subtitle {
-//   font-size: 10px;
-//   margin-top: 5px;
-//   margin-bottom: 5px;
-// }
-// .post-meta{
-//   font-size: 10px;
-//   margin-top: 5px;
-//   margin-bottom: 5px;
-// }
-// .subheading{
-//   font-size: 20px;
-// }
+@import "font-awesome-sprockets";
+@import "font-awesome";
+ 
+.alert-notice {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
 .media-object{
   display:none;
 }
