@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-        if !@articles.first.title.empty?
+        if !Article.first.title.empty?
             @articles = Article.last(2)
         end
   end
