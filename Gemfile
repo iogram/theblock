@@ -27,7 +27,8 @@ gem 'jbuilder', '2.0'
 gem 'sdoc', '0.4.0', group: :doc
 # Use to format times
 gem 'formatted_times', '0.0.4'
-
+# Use Devise for user authentication
+gem 'devise', '3.4.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

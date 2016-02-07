@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get '/contact' => 'contact#contact'
   get '/about' => 'about#about'
   get '/index' => 'home#index'
