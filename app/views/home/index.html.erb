@@ -21,18 +21,17 @@
             <hr>
             </div>
             <% @articles.each do |article| %>
-            <div class = "container col-md-10">
+            <div class = "container col-md-10 ">
                 <%= link_to(article) do %>
-                <div class="post-preview media">
-                    <div class=" media-left media-middle">
-                        <%= image_tag("PARK.jpg", width: '210', height: '210', class: "media-object") %>
-                    </div>
-                    <div class="media-body">
-                        <h2 class = "post-title media-heading"><%= article.title %></h2>
-                        <h3 class="post-subtitle">add subtitle in db</h3>
-                        <p class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></p>
-                    </div>
-                </div>
+                <table class="post-preview">
+                    <tr>
+                      <th rowspan="2"><%= image_tag("PARK.jpg", width: '150', height: '150', class: "media-object", style: "border: 1px solid #eeeeee") %></th>
+                      <td class="post-title"><%= article.title %></td>
+                    </tr>
+                    <tr>
+                      <td class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></td>
+                    </tr>
+                </table>
                 <% end %>
                  <hr>
             </div>
