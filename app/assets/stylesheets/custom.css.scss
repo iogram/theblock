@@ -15,7 +15,11 @@
 // .subheading{
 //   font-size: 20px;
 // }
-hr{
+.media-object{
+  display:none;
+}
+  
+  hr{
    clear: both;
 }
 .btn-right{
@@ -125,6 +129,9 @@ hr.small {
   letter-spacing: 1px;
 }
 @media only screen and (min-width: 768px) {
+  .media-object{
+  display:block;
+  }
   .navbar-custom {
     background: transparent;
     background-color: transparent;
@@ -151,6 +158,9 @@ hr.small {
   }
 }
 @media only screen and (min-width: 1170px) {
+  .media-object{
+  display:block;
+  }
   .navbar-custom {
     -webkit-transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;
@@ -215,6 +225,9 @@ hr.small {
 }
 
 @media only screen and (min-width: 768px) {
+  .media-object{
+  display:block;
+  }
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
@@ -240,6 +253,9 @@ hr.small {
   margin: 10px 0 0;
 }
 @media only screen and (min-width: 768px) {
+  .media-object{
+  display:block;
+  }
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
     font-size: 80px;
@@ -269,6 +285,9 @@ hr.small {
   color: white;
 }
 @media only screen and (min-width: 768px) {
+  .media-object{
+  display:block;
+  }
   .intro-header .post-heading h1 {
     font-size: 55px;
   }
@@ -315,6 +334,9 @@ hr.small {
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
+  .media-object{
+  display:block;
+  }
   .post-preview > a > .post-title {
     font-size: 36px;
   }
