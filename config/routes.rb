@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'users/new'
-
-  get '/contact' => 'contact#contact'
+  resources :contacts
   get '/about' => 'about#about'
   get '/index' => 'home#index'
   resources :articles
