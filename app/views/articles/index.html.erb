@@ -59,7 +59,7 @@
                      <% if user_signed_in? -%>
                         <%= link_to 'New article', new_article_path, class:'btn btn-default' -%>
                     <% end -%>
-                    <%= link_to "Older Posts", articles_path, class: 'btn btn-default', method: :get -%>
+                    <%= link_to "Back", root_path, class: 'btn btn-default', method: :get -%>
                 </div>
             </div>
          </div>
