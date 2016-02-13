@@ -13,7 +13,12 @@
     </div>
 </header>
 <!--Main Content-->
+
+
 <div class="container text-center">
+    <hr>
+    <h1 class="text-center">Advertising available in 4 sizes</h1>
+    <hr>
     <div class="row">
         <!--<div class=" border">-->
             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -64,18 +69,20 @@
         	</div>
         <!--</div>-->
     </div>
-</div>
+
 <!--Blog updates-->
-<div class="container">
-    <div class="row">
-        <div class="container-fluid" >
+
+<div class="container-fluid">
+    <hr>
+    <!--<div class="row border">-->
+        <!--<div class="container-fluid border" >-->
             <div class="col-md-8 col-md-offset-2 ">
                 <% if !@articles.first.title.empty? %>
                     <h1 class="text-center">Lastest News</h1>
-                    </div>
+                    <!--</div>-->
                     <hr>
                     <% @articles.each do |article| %>
-                    <div class = "container col-md-8 col-md-offset-2 ">
+                    <div>
                         <%= link_to(article) do %>
                         <table class="post-preview">
                             <tr>
@@ -100,6 +107,8 @@
                         </ul>
                     </div>
                 <% end if %>
-    </div>
-<br/>
+        <!--</div>-->
+    <br/>
+<!--</div>-->
+</div>
 </div>
