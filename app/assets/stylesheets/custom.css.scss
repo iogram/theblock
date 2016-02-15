@@ -1,10 +1,30 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
- 
+
+@media only screen and (max-width: 768px){
+  // table,tr { 
+		//   display: block; 
+// 	}
+}
+
+.banner table {
+  display: inline-block;
+  text-align: center;
+  margin-left:auto; 
+  margin-right:auto;
+}
+.banner tr td{
+  text-align: center;
+}
+.banner{
+  background-color: #0085a1;
+  padding: 45px;
+} 
 // tile flips 
 /* entire container, keeps perspective */
 .flip-container {
+  margin: 45px;
 	perspective: 1000;
 	display: inline-block;
 }
@@ -14,10 +34,13 @@
 	}
 
 .flip-container, .front, .back {
-	width: 285px;
-	height: 285px;
+	width: 175px;
+	height: 175px;
 }
-
+.notflipper{
+  position: relative;
+  transform-style: preserve-3d;
+}
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
@@ -29,12 +52,16 @@
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
 }
-
+.dummy{
+  z-index: 2;
+  position: absolute;
+	top: 0;
+	left: 0;
+}
 /* front pane, placed above back */
 .front {
 	z-index: 2;
@@ -75,9 +102,9 @@
 }
 #overbs-hf:hover,
 #overbs-hf:focus {
-  text-decoration: none;
+  color: #0085a1;
   background-color: transparent;
-  text-decoration: underline;
+  
 }
 #postbg {
   background: image-url('post-bg.jpg');
@@ -166,6 +193,7 @@ hr.small {
   font-weight: 800;
   letter-spacing: 1px;
 }
+
 @media only screen and (min-width: 768px) {
   .media-object{
   display:block;
@@ -253,7 +281,7 @@ hr.small {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,

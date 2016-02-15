@@ -2,8 +2,8 @@
 <header class="intro-header" id="mainbg" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
+            <div class=" col-md-10 col-md-offset-1">
+                <div class="site-heading ">
                     <h1>The Block</h1>
                     <hr class="small">
                     <span class="subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
@@ -15,74 +15,95 @@
 <!--Main Content-->
 
 
-<div class="container text-center">
-    <hr>
-    <h1 class="text-center">Advertising available in 4 sizes</h1>
-    <hr>
-    <div class="row">
-        <!--<div class=" border">-->
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            	<div class="flipper">
-            		<div class="front">
-            			<%= image_tag ("eighth-front.png") %>
-            		</div>
-            		<div class="back">
-        		     	<%= image_tag ("eighth-back.png") %>
-            		</div>
-            	</div>
-            </div>
-        <!--</div>-->
-        <!--<div class=" border">-->
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            	<div class="flipper">
-            		<div class="front">
-            			<%= image_tag ("quarter-front.png") %>
-            		</div>
-            		<div class="back">
-        		     	<%= image_tag ("quarter-back.png") %>
-            		</div>
-            	</div>
-            </div>
-        <!--</div>-->
-        <!--<div class=" border">-->
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            	<div class="flipper">
-            		<div class="front">
-            			<%= image_tag ("half-front.png") %>
-            		</div>
-            		<div class="back">
-            			<%= image_tag ("half-back.png") %>
-            		</div>
-            	</div>
-            </div>
-        <!--</div>-->
-        <!--<div class=" border">-->
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            	<div class="flipper">
-            		<div class="front">
-            			<%= image_tag ("full-front.png") %>
-            		</div>
-            		<div class="back">
-            			<%= image_tag ("full-back.png") %>
-            		</div>
-            	</div>
-        	</div>
-        <!--</div>-->
+
+    <div class="row text-center banner">
+        <h1 class="text-center">Choose the size that works for you</h1>
+        <table class="post-preview">
+            <tr class="">
+                <td>
+                    <div class="flip-container" style="display: inline-block">
+                    	<div class="notflipper">
+                    		<div class="dummy">
+                    			<%= image_tag("eighth-icon.svg") %>
+                    		</div>
+                    	</div>
+                	</div>
+            	</td>
+        	</tr>
+        	<tr class="">
+    	        <td class="post-title text-center">Eighth Page Ad</td>
+    	    </tr>
+	    </table>
+	    <table class="post-preview">
+            <tr class="">
+                <td> 
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    	<div class="flipper">
+                    		<div class="front">
+                    			<%= image_tag ("quarter-horizontal-icon.svg") %>
+                    		</div>
+                    		<div class="back">
+                		     	<%= image_tag ("quarter-vertical-icon.svg") %>
+                    		</div>
+                    	</div>
+                    </div>
+            	</td>
+        	</tr>
+        	<tr>
+            	<td class="post-title text-center">Quarter Page Ad</td>
+            </tr>
+        </table>
+        <table class="post-preview">
+            <tr class="">
+                <td>
+                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    	<div class="flipper">
+                    		<div class="front">
+                    			<%= image_tag("half-horizontal-icon.svg", class:"dark") %>
+                    		</div>
+                    		<div class="back">
+                    			<%= image_tag ("half-vertical-icon.svg") %>
+                    		</div>
+                    	</div>
+                    </div>
+            	</td>
+        	</tr>
+        	<tr>
+            	<td class="post-title text-center">Half Page Ad</td>
+    	    </tr>
+	    </table>
+    	<table class="post-preview">
+            <tr class="">
+                <td>
+                    <div class="flip-container" style="display: inline-block">
+                    	<div class="notflipper">
+                    		<div class="dummy">
+                    			<%= image_tag("full-icon.svg") %>
+                    		</div>
+                    	</div>
+                	</div>
+        		</td>
+        	</tr>
+            <tr>
+                <td class="post-title text-center">Full Page Ad</td>
+        	</tr>
+    	</table>
     </div>
+   
 
 <!--Blog updates-->
-
+<div class="container">
 <div class="container-fluid">
-    <hr>
+   
     <!--<div class="row border">-->
         <!--<div class="container-fluid border" >-->
-            <div class="col-md-8 col-md-offset-2 ">
+            <div class="col-md-8 col-md-offset-2">
                 <% if !@articles.first.title.empty? %>
                     <h1 class="text-center">Lastest News</h1>
                     <!--</div>-->
                     <hr>
                     <% @articles.each do |article| %>
-                    <div>
+                    <div class="text-center">
                         <%= link_to(article) do %>
                         <table class="post-preview">
                             <tr>
