@@ -16,7 +16,15 @@
   // padding: 5px;
   padding-top: 1px;
 }
-
+.panel{
+  border: 2px solid #404040;
+  border-radius: 0px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.2s ease-in-out;
+}
+.panel:hover{
+  box-shadow: 0 15px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 .paper-icon{
     width:75%; /* you can use % */
     height: auto;
@@ -36,6 +44,10 @@
 .banner{
   background-color: #8C857E;
   padding: 60px;
+  border-top: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  border-radius: 0px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 } 
 // tile flips 
 /* entire container, keeps perspective */
@@ -102,6 +114,9 @@
   
 hr{
    clear: both;
+   border: 1px solid #404040;
+   border-color: #404040;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .btn-right{
   text-align: right;
@@ -127,6 +142,7 @@ hr{
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
+  
   // background-size: 100%;
 }
 #mainbg {
@@ -135,6 +151,9 @@ hr{
   background-position: center;
   background-attachment: scroll;
   background-size: 100%;
+  border-bottom: 2px solid #404040;
+  border-radius: 0px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 #aboutbg {
   background: image-url('about-bg.jpg');
@@ -409,7 +428,8 @@ footer .copyright {
   margin: 20px 0 0;
 }
 .pager li > a,
-.pager li > span{
+.pager li > span,
+.pager li > input{
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
@@ -418,6 +438,10 @@ footer .copyright {
   padding: 15px 25px;
   background-color: white;
   border-radius: 0;
+  border: 1px solid #404040;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 20px;
 }
 
 #pagerIndex{
@@ -434,10 +458,12 @@ font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border: 1px solid #0085a1;
 }
 .pager li > a:hover,
-.pager li > a:focus{
+.pager li > a:focus,
+.pager li > input:hover{
   color: white;
   background-color: #0085a1;
-  border: 1px solid #0085a1;
+  // border: 1px solid #0085a1;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,

@@ -12,6 +12,9 @@
         </div>
     </div>
 </header>
+<br>
+<br>
+
 <!--Main Content-->
     <div class="row text-center banner">
         <h1 class="text-center">Choose the size that works for you</h1>
@@ -88,44 +91,35 @@
     </div>
 <!--Blog updates-->
 <div class="container">
-<div class="container-fluid">
-    <!--<div class="row border">-->
-        <!--<div class="container-fluid border" >-->
-            <div >
-                <% if !@articles.first.title.empty? %>
-                    <h1 class="text-center">Lastest News</h1>
-                    <!--</div>-->
-                    <hr>
-                    <% @articles.each do |article| %>
-                    <div class="text-center post col-md-6 col-md-offset-3">
-                        <%= link_to(article) do %>
-                            <!--<div class="container">-->
-                                <div class="panel panel-default news-post" style="background-image: url('park2.jpg')">
-                                    <div class="panel-body">
-                                        <h1 class="post-title"><%= article.title %></h1>
-                                    </div>
-                                    <div class="panel-heading">
-                                        <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
-                                    </div>
-                                </div>
-                            <!--</div>-->
-                            <% end %>
-                            <hr>
+    <div class="container-fluid">
+        <div >
+            <% if !@articles.first.title.empty? %>
+            <h1 class="text-center">Lastest News</h1>
+            <hr>
+            <% @articles.each do |article| %>
+            <div class="text-center post col-md-6 col-md-offset-3">
+                <%= link_to(article) do %>
+                     <div class="panel panel-default news-post" style="background-image: url('park2.jpg')">
+                        <div class="panel-body">
+                            <h1 class="post-title"><%= article.title %></h1>
                         </div>
-                    <% end %>
+                        <div class="panel-heading">
+                            <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
+                        </div>
                     </div>
-                    </div>
-                    <!--Pager-->
-                    <div class="col-md-8 col-md-offset-2 " >
-                        <ul class="pager">
-                            <li class="" >
-                              <%= link_to "Older Posts", articles_path, class: 'nav-link', method: :get %>
-                            </li>
-                        </ul>
-                    </div>
-                <% end if %>
-        <!--</div>-->
-    <br/>
-<!--</div>-->
-</div>
+                 <% end %>
+                <hr>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <!--Pager-->
+    <div class="col-md-8 col-md-offset-2 " >
+        <ul class="pager">
+            <li class="" >
+              <%= link_to "Older Posts", articles_path, class: 'nav-link', method: :get %>
+            </li>
+        </ul>
+    </div>
+             <% end if %>
 </div>

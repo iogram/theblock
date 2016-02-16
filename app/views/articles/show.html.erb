@@ -1,11 +1,11 @@
   <header class="intro-header" id="postbg">
     <div class="container">
         <div class="row ">
-            <div class="col-md-8 col-md-offset-1 border">
+            <div class="col-md-8 col-md-offset-1">
                 <div class="post-heading">
                     <h1><%= @article.title %></h1>
                     <h2 class="subheading"></h2>
-                    <span class="meta">Posted by <%= @article.author %> on <%= @article.created_at %></span>
+                    <h1 class="meta">Posted by <%= @article.author %> on <%= @article.created_at.strftime('%a, %b %d') %></h1>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <p><%= @article.text %></p>
+          <p class="post-title"><%= @article.text %></p>
           <hr>
           <div class="btn-group">
             <% if user_signed_in? %>

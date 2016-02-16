@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
+                <p class="post-title">Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
                     <div class="row control-group">
                         <%= form_for @contact do |f| %>
                         <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -42,7 +42,9 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12">
-                            <%= f.submit 'Send', class: 'btn btn-default' %>
+                            <ul class="pager">
+                                <li><%= f.submit 'Send', class: 'nav-link' %></li>
+                            </ul>
                             <% end %>
                         </div>
                     </div>
