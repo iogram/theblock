@@ -13,111 +13,107 @@
     </div>
 </header>
 <!--Main Content-->
-
-
-
     <div class="row text-center banner">
         <h1 class="text-center">Choose the size that works for you</h1>
         <table class="post-preview">
+            <tr class="">
+    	        <td class="post-title text-center">Eighth Page Ad</td>
+    	    </tr>
             <tr class="">
                 <td>
                     <div class="flip-container" style="display: inline-block">
                     	<div class="notflipper">
                     		<div class="dummy">
-                    			<%= image_tag("eighth-icon.svg") %>
+                    			<%= image_tag("eighth-icon.svg", class: "paper-icon") %>
                     		</div>
                     	</div>
                 	</div>
             	</td>
         	</tr>
-        	<tr class="">
-    	        <td class="post-title text-center">Eighth Page Ad</td>
-    	    </tr>
 	    </table>
 	    <table class="post-preview">
+	        <tr>
+            	<td class="post-title text-center">Quarter Page Ad</td>
+            </tr>
             <tr class="">
                 <td> 
                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
-                    			<%= image_tag ("quarter-horizontal-icon.svg") %>
+                    			<%= image_tag("quarter-horizontal-icon.svg", class: "paper-icon") %>
                     		</div>
                     		<div class="back">
-                		     	<%= image_tag ("quarter-vertical-icon.svg") %>
+                		     	<%= image_tag("quarter-vertical-icon.svg", class: "paper-icon") %>
                     		</div>
                     	</div>
                     </div>
             	</td>
         	</tr>
-        	<tr>
-            	<td class="post-title text-center">Quarter Page Ad</td>
-            </tr>
         </table>
         <table class="post-preview">
+            <tr>
+            	<td class="post-title text-center">Half Page Ad</td>
+    	    </tr>
             <tr class="">
                 <td>
                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                     	<div class="flipper">
                     		<div class="front">
-                    			<%= image_tag("half-horizontal-icon.svg", class:"dark") %>
+                    			<%= image_tag("half-horizontal-icon.svg", class: "paper-icon") %>
                     		</div>
                     		<div class="back">
-                    			<%= image_tag ("half-vertical-icon.svg") %>
+                    			<%= image_tag("half-vertical-icon.svg", class: "paper-icon") %>
                     		</div>
                     	</div>
                     </div>
             	</td>
         	</tr>
-        	<tr>
-            	<td class="post-title text-center">Half Page Ad</td>
-    	    </tr>
 	    </table>
     	<table class="post-preview">
+    	    <tr>
+                <td class="post-title text-center">Full Page Ad</td>
+        	</tr>
             <tr class="">
                 <td>
                     <div class="flip-container" style="display: inline-block">
                     	<div class="notflipper">
                     		<div class="dummy">
-                    			<%= image_tag("full-icon.svg") %>
+                    			<%= image_tag("full-icon.svg", class: "paper-icon") %>
                     		</div>
                     	</div>
                 	</div>
         		</td>
         	</tr>
-            <tr>
-                <td class="post-title text-center">Full Page Ad</td>
-        	</tr>
     	</table>
     </div>
-   
-
 <!--Blog updates-->
 <div class="container">
 <div class="container-fluid">
-   
     <!--<div class="row border">-->
         <!--<div class="container-fluid border" >-->
-            <div class="col-md-8 col-md-offset-2">
+            <div >
                 <% if !@articles.first.title.empty? %>
                     <h1 class="text-center">Lastest News</h1>
                     <!--</div>-->
                     <hr>
                     <% @articles.each do |article| %>
-                    <div class="text-center">
+                    <div class="text-center post col-md-6 col-md-offset-3">
                         <%= link_to(article) do %>
-                        <table class="post-preview">
-                            <tr>
-                              <th rowspan="2"><%= image_tag("PARK.jpg", width: '150', height: '150', class: "media-object", style: "border: 1px solid #eeeeee") %></th>
-                              <td class="post-title"><%= article.title %></td>
-                            </tr>
-                            <tr>
-                              <td class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></td>
-                            </tr>
-                        </table>
-                        <% end %>
-                         <hr>
-                    </div>
+                            <!--<div class="container">-->
+                                <div class="panel panel-default news-post" style="background-image: url('park2.jpg')">
+                                    <div class="panel-body">
+                                        <h1 class="post-title"><%= article.title %></h1>
+                                    </div>
+                                    <div class="panel-heading">
+                                        <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
+                                    </div>
+                                </div>
+                            <!--</div>-->
+                            <% end %>
+                            <hr>
+                        </div>
                     <% end %>
+                    </div>
                     </div>
                     <!--Pager-->
                     <div class="col-md-8 col-md-offset-2 " >
