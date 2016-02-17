@@ -1,6 +1,4 @@
-
 <%= form_for @article do |f| %>
- 
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -33,9 +31,11 @@
           </div>
         </div>
         <br>
-        <%= f.submit class: 'btn btn-success' %>
-        <%= link_to 'Back', articles_path, class:'btn btn-primary next', style:'float:right' %>
-        <% end %>
+        <ul class= "pager">
+          <li><%= f.submit class: 'nav-link' %></li>
+          <li><%= link_to 'Back', articles_path, class:'nav-link', style:'float:right' %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
