@@ -1,7 +1,10 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+.main-logo{
+  width:50%;
+  height:50%;
+}
 .news-post{
   background-repeat: no-repeat;
   background-position: center;
@@ -31,7 +34,7 @@
 }
 
 .banner table {
-  display: inline-block;
+  // display: block;
   text-align: center;
   margin-left:auto; 
   margin-right:auto;
@@ -504,6 +507,12 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .banner > table{
+  display: inline-block;
+  }
+  .main-logo{
+  width: 80%;
+}
   .navbar-custom .nav li a{
     font-size: 20px;
   }
@@ -555,6 +564,12 @@ body {
 }
 
 @media only screen and (min-width: 1170px) {
+  .banner > table{
+  display: inline-block;
+  }
+   .main-logo{
+    width: 80%;
+  }
   .navbar-custom .nav li a,
   .navbar-custom .navbar-brand a{
     font-size: 18px;
