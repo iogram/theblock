@@ -1,6 +1,79 @@
-
 @import "font-awesome-sprockets";
 @import "font-awesome";
+// Tabs
+.tab-table{
+  width:100%;
+  tr{
+    width:100%;
+  }
+  td{
+  width: 100%;
+  }
+}
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+ul.tabs:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #404040;
+  z-index: 1;
+}
+ul.tabs:before{
+  z-index: 1;
+  content: "";
+}
+ul.tabs li{
+	background: #70878C;
+	color: #404040;
+	display: inline-block;
+	padding: 8px;
+	font-weight: 800;
+	font-size: 1.2em;
+	border: 2px solid #404040;
+	position: relative;
+	z-index:0;
+	cursor: default;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	transition: all 0.2s ease-in-out;
+}
+
+ul.tabs li.current{
+	background: #8C857E;
+	color: white;
+	border-bottom: 2px solid #8C857E;
+	z-index:2;
+	box-shadow: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.tab-content.post-title{
+	display: none;
+	background: #8C857E;
+	padding: 15px;
+	color:white;
+	border-right: 2px solid #404040;
+	border-left: 2px solid #404040;
+	border-bottom: 2px solid #404040;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	height: 100%
+}
+
+.tab-content.current{
+	display: inherit;
+// 	border: 2px solid #404040;
+}
+
 .main-logo{
   width:50%;
   height:50%;
@@ -45,6 +118,7 @@
   font-weight: 800;
 }
 .banner{
+  overflow: hidden;
   background-color: #8C857E;
   padding: 60px;
   border-top: 2px solid #404040;
@@ -264,9 +338,8 @@ hr.small {
   margin-top: 0;
   font-size: 50px;
 }
-.intro-header .site-heading .subheading,
-.intro-header .page-heading .subheading {
-  font-size: 24px;
+.subheading {
+  font-size: 1.5em;
   line-height: 1.1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -281,9 +354,9 @@ hr.small {
   line-height: 1.1;
   display: block;
 }
-.intro-header .post-heading .subheading {
+.subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   margin: 10px 0 30px;
   font-weight: 600;
 }
@@ -507,6 +580,10 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  ul.tabs li{
+    padding: 10px 15px 10px 15px;
+    font-size: 2em;
+  }
   .banner > table{
   display: inline-block;
   }
@@ -554,8 +631,8 @@ body {
   .intro-header .post-heading h1 {
     font-size: 55px;
   }
-  .intro-header .post-heading .subheading {
-    font-size: 30px;
+  .subheading {
+    font-size: 3em;
   }
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
@@ -564,6 +641,13 @@ body {
 }
 
 @media only screen and (min-width: 1170px) {
+  .subheading {
+    font-size: 3em;
+  }
+  ul.tabs li{
+    padding: 10px 15px 10px 15px;
+    font-size: 2em;
+  }
   .banner > table{
   display: inline-block;
   }

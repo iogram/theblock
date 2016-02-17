@@ -16,79 +16,122 @@
 <br>
 
 <!--Main Content-->
-    <div class="row text-center banner">
-        <h1 class="text-center">Choose the size that works for you</h1>
-        <table class="post-preview">
-            <tr class="">
-    	        <td class="post-title text-center">Eighth Page Ad</td>
-    	    </tr>
-            <tr class="">
-                <td>
-                    <div class="flip-container" style="display: inline-block">
-                    	<div class="notflipper">
-                    		<div class="dummy">
-                    			<%= image_tag("eighth-icon.svg", class: "paper-icon") %>
-                    		</div>
-                    	</div>
-                	</div>
-            	</td>
-        	</tr>
-	    </table>
-	    <table class="post-preview">
-	        <tr>
-            	<td class="post-title text-center">Quarter Page Ad</td>
-            </tr>
-            <tr class="">
-                <td> 
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    	<div class="flipper">
-                    		<div class="front">
-                    			<%= image_tag("quarter-horizontal-icon.svg", class: "paper-icon") %>
-                    		</div>
-                    		<div class="back">
-                		     	<%= image_tag("quarter-vertical-icon.svg", class: "paper-icon") %>
-                    		</div>
-                    	</div>
-                    </div>
-            	</td>
-        	</tr>
-        </table>
-        <table class="post-preview">
-            <tr>
-            	<td class="post-title text-center">Half Page Ad</td>
-    	    </tr>
-            <tr class="">
-                <td>
-                    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                    	<div class="flipper">
-                    		<div class="front">
-                    			<%= image_tag("half-horizontal-icon.svg", class: "paper-icon") %>
-                    		</div>
-                    		<div class="back">
-                    			<%= image_tag("half-vertical-icon.svg", class: "paper-icon") %>
-                    		</div>
-                    	</div>
-                    </div>
-            	</td>
-        	</tr>
-	    </table>
-    	<table class="post-preview">
-    	    <tr>
-                <td class="post-title text-center">Full Page Ad</td>
-        	</tr>
-            <tr class="">
-                <td>
-                    <div class="flip-container" style="display: inline-block">
-                    	<div class="notflipper">
-                    		<div class="dummy">
-                    			<%= image_tag("full-icon.svg", class: "paper-icon") %>
-                    		</div>
-                    	</div>
-                	</div>
-        		</td>
-        	</tr>
-    	</table>
-    </div>
+<div class="container post-preview">
+    <!--<table class="tab-table">-->
+        <!--<tr>-->
+            <!--<td>-->
+            	<ul class="tabs">
+            		<li class="post-title text-center tab-link current" data-tab="tab-1">Step 1</li>
+            		<li class="post-title text-center tab-link" data-tab="tab-2">Step 2</li>
+            		<li class="post-title text-center tab-link" data-tab="tab-3">Step 3</li>
+            		<li class="post-title text-center tab-link" data-tab="tab-4">Step 4</li>
+            	</ul>
+        	<!--</td>-->
+	    <!--</tr>-->
+    	<!--<tr>-->
+    	    <!--<td>-->
+            	<div id="tab-1" class="post-title text-center tab-content current">
+                    <p>Sign up!</p>
+                    <p>Sign up for an account. Your account will allow you to upload your images and make purchases. </p>
+                    <p>Click Here.</p>
+            	</div>
+            	<div id="tab-2" class="post-title text-center tab-content">
+            	    <p>Choose a size!</p>
+            	    <p>Take a look at the sizes of AD and choose which will suit your needs. We have a variety of sizes.</p>
+            	    <p>Click Here.</p>
+            	</div>
+            	<div id="tab-3" class="post-title text-center tab-content">
+        	        <p>Choose your print frequency</p>
+        	        <p>You decide how often you would like your AD to print and what days it will run on. Its all up to you.</p>
+        	        <p>Click Here.</p>
+        	    </div>
+            	<div id="tab-4" class="post-title text-center tab-content">
+            	    <p>Checkout!</p>
+            	    <p>Thats its, your done. Finalize your order and make your payment</p>
+            	    <p>Click Here.</p>
+            	</div>
+        	<!--</td>-->
+    	<!--</tr>-->
+	<!--</table>-->
+</div>
+
+<% if false %>
+    <!--<div class="row text-center banner">-->
+    <!--    <h1 class="text-center">Choose the size that works for you</h1>-->
+    <!--    <table class="post-preview">-->
+    <!--        <tr class="">-->
+    <!--	        <td class="post-title text-center">Eighth Page Ad</td>-->
+    <!--	    </tr>-->
+    <!--        <tr class="">-->
+    <!--            <td>-->
+    <!--                <div class="flip-container" style="display: inline-block">-->
+    <!--                	<div class="notflipper">-->
+    <!--                		<div class="dummy">-->
+    <!--                			<%= image_tag("eighth-icon.svg", class: "paper-icon") %>-->
+    <!--                		</div>-->
+    <!--                	</div>-->
+    <!--            	</div>-->
+    <!--        	</td>-->
+    <!--    	</tr>-->
+	   <!-- </table>-->
+	   <!-- <table class="post-preview">-->
+	   <!--     <tr>-->
+    <!--        	<td class="post-title text-center">Quarter Page Ad</td>-->
+    <!--        </tr>-->
+    <!--        <tr class="">-->
+    <!--            <td> -->
+    <!--                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">-->
+    <!--                	<div class="flipper">-->
+    <!--                		<div class="front">-->
+    <!--                			<%= image_tag("quarter-horizontal-icon.svg", class: "paper-icon") %>-->
+    <!--                		</div>-->
+    <!--                		<div class="back">-->
+    <!--            		     	<%= image_tag("quarter-vertical-icon.svg", class: "paper-icon") %>-->
+    <!--                		</div>-->
+    <!--                	</div>-->
+    <!--                </div>-->
+    <!--        	</td>-->
+    <!--    	</tr>-->
+    <!--    </table>-->
+    <!--    <table class="post-preview">-->
+    <!--        <tr>-->
+    <!--        	<td class="post-title text-center">Half Page Ad</td>-->
+    <!--	    </tr>-->
+    <!--        <tr class="">-->
+    <!--            <td>-->
+    <!--                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">-->
+    <!--                	<div class="flipper">-->
+    <!--                		<div class="front">-->
+    <!--                			<%= image_tag("half-horizontal-icon.svg", class: "paper-icon") %>-->
+    <!--                		</div>-->
+    <!--                		<div class="back">-->
+    <!--                			<%= image_tag("half-vertical-icon.svg", class: "paper-icon") %>-->
+    <!--                		</div>-->
+    <!--                	</div>-->
+    <!--                </div>-->
+    <!--        	</td>-->
+    <!--    	</tr>-->
+	   <!-- </table>-->
+    <!--	<table class="post-preview">-->
+    <!--	    <tr>-->
+    <!--            <td class="post-title text-center">Full Page Ad</td>-->
+    <!--    	</tr>-->
+    <!--        <tr class="">-->
+    <!--            <td>-->
+    <!--                <div class="flip-container" style="display: inline-block">-->
+    <!--                	<div class="notflipper">-->
+    <!--                		<div class="dummy">-->
+    <!--                			<%= image_tag("full-icon.svg", class: "paper-icon") %>-->
+    <!--                		</div>-->
+    <!--                	</div>-->
+    <!--            	</div>-->
+    <!--    		</td>-->
+    <!--    	</tr>-->
+    <!--	</table>-->
+    <!--</div>-->
+<% end %>
+
+
 <!--Blog updates-->
 <div class="container">
     <div class="container-fluid">
