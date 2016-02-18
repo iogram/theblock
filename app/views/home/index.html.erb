@@ -16,10 +16,10 @@
 <br>
 
 <!--Main Content-->
-<div class="row equalizer">
-    <div class="container col-md-8 col-md-offset-2">
-        <h1 class="text-center">Getting started is easy</h1>
-        <hr>
+<div class="row">
+    <div class="container">
+    <h1 class="text-center">Getting started is easy</h1>
+    <hr>
     </div>
     <div class="container post col-md-2 col-md-offset-2 equal">
         <div class="text-center post">   
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="panel-group post col-md-2 col-md-offset-1 equal" id="accordion">
+    <div class="panel-group post col-md-2 col-md-offset-1" id="accordion">
         <div class="panel panel-default news-post">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
                 <div class="panel-heading accordion-link">
@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-    <div class="container post col-md-2 col-md-offset-1 equal">
+    <div class="container post col-md-2 col-md-offset-1 ">
         <div class="text-center post">   
              <div class="panel panel-default upper-post" style="background-image: url('images/advertise.jpg')">
                 <div class="panel-body">
@@ -100,26 +100,29 @@
 </div>
 
 <!--Blog updates-->
-<div class="row">
-    <div class="container">
-        <% if !@articles.first.title.empty? %>
+<div class="container">
+    <div class="container-fluid">
+        <div>
+            <% if !@articles.first.title.empty? %>
             <h1 class="text-center">Lastest News</h1>
+            <hr>
             <% @articles.each do |article| %>
-            <div class="text-center post col-md-4 col-md-offset-4"><hr>
-            <%= link_to(article) do %>
-                <div class="panel panel-default news-post" style="background-image: url('images/park2.jpg')">
-                    <div class="panel-body">
-                        <h1 class="post-title"><%= article.title %></h1>
+            <div class="text-center post col-md-6 col-md-offset-3">
+                <%= link_to(article) do %>
+                     <div class="panel panel-default news-post" style="background-image: url('images/park2.jpg')">
+                        <div class="panel-body">
+                            <h1 class="post-title"><%= article.title %></h1>
+                        </div>
+                        <div class="panel-heading">
+                            <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
+                        </div>
                     </div>
-                    <div class="panel-heading">
-                        <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
-                    </div>
-                </div>
-            <% end %>
+                 <% end %>
+                <hr>
             </div>
-        <% end %>
+            <% end %>
+        </div>
     </div>
-    
     <!--Pager-->
     <div class="col-md-8 col-md-offset-2 " >
         <ul class="pager">
