@@ -1,5 +1,18 @@
 $(document).ready( function() {
+    //   Starts accordion closed      
+    $('#collapse1').collapse("hide");   
     
+     // Tab control     
+    $('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})       
+	
     /* Check width on page load*/
     if ( $(window).width() < 768) {
      $('nav').addClass('navbar-default navbar-fixed-top');
@@ -58,18 +71,8 @@ $(document).ready( function() {
                     $("body").click(function(event) {
                         $(".navbar-collapse").collapse('hide');
                     });
-                    
-    // Tab control
-                    
-    $('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
-
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
-
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	})             
+    
+         
 });
 
  

@@ -16,133 +16,82 @@
 <br>
 
 <!--Main Content-->
-<div class="container post-preview">
-    <!--<table class="tab-table">-->
-        <!--<tr>-->
-            <!--<td>-->
-            	<ul class="tabs">
-            		<li class="post-title text-center tab-link current" data-tab="tab-1">Step 1</li>
-            		<li class="post-title text-center tab-link" data-tab="tab-2">Step 2</li>
-            		<li class="post-title text-center tab-link" data-tab="tab-3">Step 3</li>
-            		<li class="post-title text-center tab-link" data-tab="tab-4">Step 4</li>
-            	</ul>
-        	<!--</td>-->
-	    <!--</tr>-->
-    	<!--<tr>-->
-    	    <!--<td>-->
-            	<div id="tab-1" class="post-title text-center tab-content current">
-                    <p>Sign up!</p>
-                    <p>Sign up for an account. Your account will allow you to upload your images and make purchases. </p>
-                    <p>Click Here.</p>
-            	</div>
-            	<div id="tab-2" class="post-title text-center tab-content">
-            	    <p>Choose a size!</p>
-            	    <p>Take a look at the sizes of AD and choose which will suit your needs. We have a variety of sizes.</p>
-            	    <p>Click Here.</p>
-            	</div>
-            	<div id="tab-3" class="post-title text-center tab-content">
-        	        <p>Choose your print frequency</p>
-        	        <p>You decide how often you would like your AD to print and what days it will run on. Its all up to you.</p>
-        	        <p>Click Here.</p>
-        	    </div>
-            	<div id="tab-4" class="post-title text-center tab-content">
-            	    <p>Checkout!</p>
-            	    <p>Thats its, your done. Finalize your order and make your payment</p>
-            	    <p>Click Here.</p>
-            	</div>
-        	<!--</td>-->
-    	<!--</tr>-->
-	<!--</table>-->
+<div class="row">
+    <div class="container post col-md-3 col-md-offset-1">
+        <div class="text-center post">   
+             <div class="panel panel-default upper-post" style="background-image: url('images/calendar.jpg');opacity:1">
+                <div class="panel-body">
+                    <h1 class="post-title">Submit Events</h1>
+                </div>
+                <div class="panel-heading">
+                    <h1 class="post-meta">Have an upcoming event you would like to advertise?</h1> 
+                    <ul class="pager">
+                        <li class="">
+                          <%= link_to "Click Here to Submit", root_path, class: 'nav-link', method: :get %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-group post col-md-2" id="accordion">
+        <div class="panel panel-default news-post">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Step 1</h4>
+                </div>
+            </a>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body"><h1 class ="post-title-dark">Sign Up</h1></div>
+        </div>
+      </div>
+      <div class="panel panel-default news-post">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            Step 2</a>
+          </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body"><h1 class ="post-title-dark">Pick Ad Size</h1></div>
+        </div>
+      </div>
+      <div class="panel panel-default news-post">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+            Step 3</a>
+          </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body"><h1 class ="post-title-dark">Pick Insertions</h1></div>
+        </div>
+      </div>
+      <div class="panel panel-default news-post">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+            Step 4</a>
+          </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse">
+          <div class="panel-body"><h1 class ="post-title-dark">Pay</h1></div>
+        </div>
+      </div>
+    </div>
 </div>
-
-<% if false %>
-    <!--<div class="row text-center banner">-->
-    <!--    <h1 class="text-center">Choose the size that works for you</h1>-->
-    <!--    <table class="post-preview">-->
-    <!--        <tr class="">-->
-    <!--	        <td class="post-title text-center">Eighth Page Ad</td>-->
-    <!--	    </tr>-->
-    <!--        <tr class="">-->
-    <!--            <td>-->
-    <!--                <div class="flip-container" style="display: inline-block">-->
-    <!--                	<div class="notflipper">-->
-    <!--                		<div class="dummy">-->
-    <!--                			<%= image_tag("eighth-icon.svg", class: "paper-icon") %>-->
-    <!--                		</div>-->
-    <!--                	</div>-->
-    <!--            	</div>-->
-    <!--        	</td>-->
-    <!--    	</tr>-->
-	   <!-- </table>-->
-	   <!-- <table class="post-preview">-->
-	   <!--     <tr>-->
-    <!--        	<td class="post-title text-center">Quarter Page Ad</td>-->
-    <!--        </tr>-->
-    <!--        <tr class="">-->
-    <!--            <td> -->
-    <!--                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">-->
-    <!--                	<div class="flipper">-->
-    <!--                		<div class="front">-->
-    <!--                			<%= image_tag("quarter-horizontal-icon.svg", class: "paper-icon") %>-->
-    <!--                		</div>-->
-    <!--                		<div class="back">-->
-    <!--            		     	<%= image_tag("quarter-vertical-icon.svg", class: "paper-icon") %>-->
-    <!--                		</div>-->
-    <!--                	</div>-->
-    <!--                </div>-->
-    <!--        	</td>-->
-    <!--    	</tr>-->
-    <!--    </table>-->
-    <!--    <table class="post-preview">-->
-    <!--        <tr>-->
-    <!--        	<td class="post-title text-center">Half Page Ad</td>-->
-    <!--	    </tr>-->
-    <!--        <tr class="">-->
-    <!--            <td>-->
-    <!--                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">-->
-    <!--                	<div class="flipper">-->
-    <!--                		<div class="front">-->
-    <!--                			<%= image_tag("half-horizontal-icon.svg", class: "paper-icon") %>-->
-    <!--                		</div>-->
-    <!--                		<div class="back">-->
-    <!--                			<%= image_tag("half-vertical-icon.svg", class: "paper-icon") %>-->
-    <!--                		</div>-->
-    <!--                	</div>-->
-    <!--                </div>-->
-    <!--        	</td>-->
-    <!--    	</tr>-->
-	   <!-- </table>-->
-    <!--	<table class="post-preview">-->
-    <!--	    <tr>-->
-    <!--            <td class="post-title text-center">Full Page Ad</td>-->
-    <!--    	</tr>-->
-    <!--        <tr class="">-->
-    <!--            <td>-->
-    <!--                <div class="flip-container" style="display: inline-block">-->
-    <!--                	<div class="notflipper">-->
-    <!--                		<div class="dummy">-->
-    <!--                			<%= image_tag("full-icon.svg", class: "paper-icon") %>-->
-    <!--                		</div>-->
-    <!--                	</div>-->
-    <!--            	</div>-->
-    <!--    		</td>-->
-    <!--    	</tr>-->
-    <!--	</table>-->
-    <!--</div>-->
-<% end %>
-
-
+<hr>
 <!--Blog updates-->
 <div class="container">
     <div class="container-fluid">
-        <div >
+        <div>
             <% if !@articles.first.title.empty? %>
             <h1 class="text-center">Lastest News</h1>
             <hr>
             <% @articles.each do |article| %>
             <div class="text-center post col-md-6 col-md-offset-3">
                 <%= link_to(article) do %>
-                     <div class="panel panel-default news-post" style="background-image: url('park2.jpg')">
+                     <div class="panel panel-default news-post" style="background-image: url('images/park2.jpg')">
                         <div class="panel-body">
                             <h1 class="post-title"><%= article.title %></h1>
                         </div>
@@ -159,7 +108,7 @@
     <!--Pager-->
     <div class="col-md-8 col-md-offset-2 " >
         <ul class="pager">
-            <li class="" >
+            <li class="">
               <%= link_to "Older Posts", articles_path, class: 'nav-link', method: :get %>
             </li>
         </ul>

@@ -1,79 +1,23 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
-// Tabs
-.tab-table{
-  width:100%;
-  tr{
-    width:100%;
-  }
-  td{
-  width: 100%;
-  }
+.panel-title {
+  margin: 10px;
 }
-ul.tabs{
-	margin: 0px;
-	padding: 0px;
-	text-align: center;
-	margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
+.upper-post > .panel-heading{
+  background: rgba(232,232,232,0.6)
 }
-
-ul.tabs:after{
-  position: absolute;
-  content: "";
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  border-bottom: 2px solid #404040;
-  z-index: 1;
+.panel-heading > h1{
+  text-align:left;
+  color: black;
 }
-ul.tabs:before{
-  z-index: 1;
-  content: "";
+.panel.panel-default.news-post{
+  border-radius:0px;
 }
-ul.tabs li{
-	background: #70878C;
-	color: #404040;
-	display: inline-block;
-	padding: 8px;
-	font-weight: 800;
-	font-size: 1.2em;
-	border: 2px solid #404040;
-	position: relative;
-	z-index:0;
-	cursor: default;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	transition: all 0.2s ease-in-out;
+.post-title-dark {
+  color:#404040;
+  font-size: 2em;
+  
 }
-
-ul.tabs li.current{
-	background: #8C857E;
-	color: white;
-	border-bottom: 2px solid #8C857E;
-	z-index:2;
-	box-shadow: none;
-	transition: all 0.2s ease-in-out;
-}
-
-.tab-content.post-title{
-	display: none;
-	background: #8C857E;
-	padding: 15px;
-	color:white;
-	border-right: 2px solid #404040;
-	border-left: 2px solid #404040;
-	border-bottom: 2px solid #404040;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	height: 100%
-}
-
-.tab-content.current{
-	display: inherit;
-// 	border: 2px solid #404040;
-}
-
 .main-logo{
   width:50%;
   height:50%;
@@ -85,9 +29,19 @@ ul.tabs li.current{
   background-repeat:no-repeat;
   background-size:cover;
   position: relative;
+  border-radius:0px;
 }
-.panel-heading{
-  opacity: 0.6;
+.upper-post{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position: relative;
+  border-radius:0px;
+}
+.news-post > .panel-heading{
+  background: rgba(232,232,232,0.6);
   margin-top: 0px;
   // padding: 5px;
   padding-top: 1px;
