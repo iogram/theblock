@@ -1,5 +1,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
+img{
+  opacity:0;
+}
 .equal{
   display: table-cell;
 }
@@ -40,6 +43,7 @@ a:focus, a:hover, a:active{
   height:50%;
 }
 .news-post{
+  opacity:0;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
@@ -190,7 +194,8 @@ hr{
 }
 #postbg {
   background: image-url('post-bg.jpg');
-  background-repeat: no-repeat;
+  opacity:0;
+  // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
   border-bottom: 2px solid #404040;
@@ -199,7 +204,8 @@ hr{
 }
 #mainbg {
   background: image-url('newspaper.jpg');
-  background-repeat: no-repeat;
+  opacity:0;
+  // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
   background-size: 100%;
@@ -209,7 +215,8 @@ hr{
 }
 #aboutbg {
   background: image-url('about-bg.jpg');
-  background-repeat: no-repeat;
+  opacity:0;
+  // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
   border-bottom: 2px solid #404040;
@@ -218,7 +225,8 @@ hr{
 }
 #contactbg {
   background: image-url('contact-bg.jpg');
-  background-repeat: no-repeat;
+  opacity:0;
+  // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
   border-bottom: 2px solid #404040;

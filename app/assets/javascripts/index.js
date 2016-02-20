@@ -1,4 +1,17 @@
+
 $(document).ready( function() {
+    $('.intro-header').waitForImages({
+    finished:function(){$(this).animate({opacity: 1},1000);},
+    waitForAll:true
+    });
+    $('img').waitForImages({
+        finished:function(){$(this).animate({opacity: 1},1000);},
+        waitForAll:true
+    });
+    $('.news-post').waitForImages({
+        finished:function(){$(this).animate({opacity: 1},1000);},
+        waitForAll:true
+    });
     //   Starts accordion closed      
     $('#collapse1').collapse("hide");   
     

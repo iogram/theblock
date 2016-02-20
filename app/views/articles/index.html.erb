@@ -23,19 +23,19 @@
             <hr>
         </div>
         <% if !@articles.first.title.empty? -%>
-            <% @articles.each do |article| -%>
-            <div class = "text-center post col-md-6 col-md-offset-3">
-                <%= link_to(article) do -%>
-                <div class="panel panel-default news-post" style="background-image: url('park2.jpg')">
-                    <div class="panel-body">
-                        <h1 class="post-title"><%= article.title %></h1>
+            <% @articles.each do |article| %>
+            <div class="text-center post col-md-6 col-md-offset-3">
+                <%= link_to(article) do %>
+                     <div class="panel panel-default news-post" style="background-image: url('images/park2.jpg')">
+                        <div class="panel-body">
+                            <h1 class="post-title"><%= article.title %></h1>
+                        </div>
+                        <div class="panel-heading">
+                            <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
+                        </div>
                     </div>
-                    <div class="panel-heading">
-                        <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
-                    </div>
-                </div>
-                <% end -%>
-                <hr>   
+                 <% end %>
+                <hr>
             </div>
             <div class="container col-md-8 col-md-offset-3 ">
                 <ul class="pager">
