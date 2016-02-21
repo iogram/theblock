@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="308.535" height="209.455">
+	<g id="dp_dp001" transform="matrix(1,0,0,1,-50.2093,-259.901)">
+		<image id="dp_image002" fill="none" x="42.5093" y="247.58" width="325.476" height="226.396" xlink:href="DrawEBA3_images/DrawEBA3_001.png"/>
+		<path id="dp_path003" fill="white" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 59.544,264.568 L 205.137,264.568 L 205.137,456.655 L 59.544,456.655 Z "/>
+		<path id="dp_path004" fill="white" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 205.139,264.593 L 350.732,264.593 L 350.732,456.68 L 205.139,456.68 Z "/>
+		<path id="dp_path005" fill="#0ab2d9" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 62.56,360.612 L 202.123,360.612 L 202.123,453.544 L 62.56,453.544 Z "/>
+		<path id="dp_path006" fill="#0ab2d9" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 277.936,267.653 L 347.719,267.653 L 347.719,453.569 L 277.936,453.569 Z "/>
+	</g>
+</svg>

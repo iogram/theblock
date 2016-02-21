@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="308.535" height="209.455">
+	<g id="dp_dp001" transform="matrix(1,0,0,1,-369.663,-259.875)">
+		<image id="dp_image002" fill="none" x="361.963" y="247.553" width="325.476" height="226.396" xlink:href="Draw8F94_images/Draw8F94_001.png"/>
+		<path id="dp_path003" fill="white" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 378.997,264.541 L 524.591,264.541 L 524.591,456.628 L 378.997,456.628 Z "/>
+		<path id="dp_path004" fill="#0ab2d9" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 451.795,360.585 L 521.577,360.585 L 521.577,453.517 L 451.795,453.517 Z "/>
+		<path id="dp_path005" fill="white" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 524.592,264.567 L 670.185,264.567 L 670.185,456.653 L 524.592,456.653 Z "/>
+		<path id="dp_path006" fill="#0ab2d9" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 529.135,407.077 L 667.171,407.077 L 667.171,453.543 L 529.135,453.543 Z "/>
+	</g>
+</svg>

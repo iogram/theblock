@@ -1,7 +1,22 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
-img{
-  opacity:0;
+
+
+table{
+  display:inline-block;
+}
+.pricing-table{
+  // margin-left: 16%;
+  td { 
+    width: 100%; 
+    border-bottom: 1px solid #404040;
+    text-align: center;
+  }
+}
+.fadeimage{
+  opacity:1;
+  width: 95%;
+  height:auto;
 }
 .equal{
   display: table-cell;
@@ -43,7 +58,7 @@ a:focus, a:hover, a:active{
   height:50%;
 }
 .news-post{
-  opacity:0;
+  opacity:1;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
@@ -194,7 +209,7 @@ hr{
 }
 #postbg {
   background: image-url('post-bg.jpg');
-  opacity:0;
+  opacity:1;
   // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
@@ -204,7 +219,7 @@ hr{
 }
 #mainbg {
   background: image-url('newspaper.jpg');
-  opacity:0;
+  opacity:1;
   // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
@@ -213,9 +228,19 @@ hr{
   border-radius: 0px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+#pricingbg {
+  background: image-url('pircing-bg.jpg');
+  opacity:1;
+  // background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  border-bottom: 2px solid #404040;
+  border-radius: 0px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
 #aboutbg {
   background: image-url('about-bg.jpg');
-  opacity:0;
+  opacity:1;
   // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
@@ -225,7 +250,7 @@ hr{
 }
 #contactbg {
   background: image-url('contact-bg.jpg');
-  opacity:0;
+  opacity:1;
   // background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
@@ -575,6 +600,17 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .fadeimage{
+  text-align: left;
+  width:100%;
+  }
+  .pricing-table{
+    margin-left: auto; 
+    text-align: left;
+    img{
+      display:inline-block;
+    }
+  }
   ul.tabs li{
     padding: 10px 15px 10px 15px;
     font-size: 2em;
@@ -636,6 +672,17 @@ body {
 }
 
 @media only screen and (min-width: 1170px) {
+  .pricing-table{
+  margin-left: auto
+  img{
+    display:inline-block;
+  }
+  }
+  .fadeimage{
+  text-align: left;
+  width:100%;
+  // height:auto;
+  }
   .subheading {
     font-size: 3em;
   }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180.645" height="180.645">
-	<g id="dp_dp001" transform="matrix(1,0,0,1,-623.911,-54.308)">
-		<path id="dp_path002" fill="none" fill-rule="evenodd" stroke="#404040" stroke-width="5.33333" d="M 714.076,56.9787 C 762.397,56.9787 801.571,96.152 801.571,144.475 C 801.571,192.797 762.397,231.971 714.076,231.971 C 665.755,231.971 626.581,192.797 626.581,144.475 C 626.581,96.152 665.755,56.9787 714.076,56.9787 Z "/>
-		<path id="dp_path003" fill="none" fill-rule="evenodd" stroke="#404040" stroke-width="6" d="M 673.8,87.9453 C 673.8,83.944 677.044,80.7 681.045,80.7 L 747.055,80.7 C 751.056,80.7 754.3,83.944 754.3,87.9453 L 754.3,199.453 C 754.3,203.455 751.056,206.699 747.055,206.699 L 681.045,206.699 C 677.044,206.699 673.8,203.455 673.8,199.453 Z "/>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="308.535" height="209.455">
+	<g id="dp_dp001" transform="matrix(1,0,0,1,-49.1653,-48.248)">
+		<image id="dp_image002" fill="none" x="41.4653" y="35.9267" width="325.476" height="226.396" xlink:href="Draw4D60_images/Draw4D60_001.png"/>
+		<path id="dp_path003" fill="white" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 58.5,52.9147 L 204.093,52.9147 L 204.093,245.001 L 58.5,245.001 Z "/>
+		<path id="dp_path004" fill="#0ab2d9" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 61.516,55.9747 L 201.079,55.9747 L 201.079,241.891 L 61.516,241.891 Z "/>
+		<path id="dp_path005" fill="white" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 204.095,52.94 L 349.688,52.94 L 349.688,245.027 L 204.095,245.027 Z "/>
+		<path id="dp_path006" fill="#0ab2d9" fill-rule="evenodd" stroke="#404040" stroke-width="1.33333" d="M 207.111,56 L 346.673,56 L 346.673,241.916 L 207.111,241.916 Z "/>
 	</g>
 </svg>
