@@ -1,0 +1,135 @@
+<!--Header-->
+<header class="intro-header" id="mainbg" >
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-10 col-md-offset-1">
+                <div class="site-heading text-center">
+                    <%= image_tag("theblocklogo.png", style: "width:80%") %>
+                    <hr class="small">
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+<br>
+
+<!--Main Content-->
+<div class="row">
+    <div class="container">
+    <h1 class="text-center">Getting started is easy</h1>
+    <hr>
+    </div>
+    <div class="container post col-md-2 col-md-offset-2 equal">
+        <div class="text-center post">   
+             <div class="panel panel-default upper-post" style="background-image: url('images/calendar.jpg')">
+                <div class="panel-body">
+                    <h1 class="post-title-white">Submit Events</h1>
+                </div>
+                <div class="panel-heading">
+                    <h1 class="post-meta">Have an upcoming event you would like to advertise?</h1> 
+                    <ul class="pager">
+                        <li class="">
+                          <%= link_to "Submit Your Event", root_path, class: 'nav-link', method: :get %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-group post col-md-2 col-md-offset-1" id="accordion">
+        <div class="panel panel-default news-post">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                <div class="panel-heading accordion-link">
+                  <h4 class="panel-title">Step 1</h4>
+                </div>
+            </a>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body"><h1 class ="post-title-dark">Sign Up</h1></div>
+            </div>
+        </div>
+        <div class="panel panel-default news-post">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"> 
+                <div class="panel-heading accordion-link">
+                     <h4 class="panel-title">Step 2</h4>
+                </div>
+            </a>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body"><h1 class ="post-title-dark">Pick Ad Size</h1></div>
+            </div>
+        </div>
+        <div class="panel panel-default news-post">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                <div class="panel-heading accordion-link">
+                    <h4 class="panel-title">Step 3</h4>
+                </div>
+            </a>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body"><h1 class ="post-title-dark">Pick Insertions</h1></div>
+            </div>
+        </div>
+        <div class="panel panel-default news-post">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                <div class="panel-heading accordion-link">
+                    <h4 class="panel-title">Step 4</h4>
+                </div>
+            </a>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body"><h1 class ="post-title-dark">Pay</h1></div>
+            </div>
+        </div>
+    </div>
+    <div class="container post col-md-2 col-md-offset-1 ">
+        <div class="text-center post">   
+             <div class="panel panel-default upper-post" style="background-image: url('images/advertise.jpg')">
+                <div class="panel-body">
+                    <h1 class="post-title-white">Advertise</h1>
+                </div>
+                <div class="panel-heading">
+                    <h1 class="post-meta">Want to advertise with us? Call (###) ### #### or click below to sign up and get started</h1> 
+                    <ul class="pager">
+                        <li class="">
+                          <%= link_to "Sign Up", root_path, class: 'nav-link', method: :get %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Blog updates-->
+<div class="container">
+    <div class="container-fluid">
+        <div>
+            <% if !@articles.first.title.empty? %>
+            <h1 class="text-center">Lastest News</h1>
+            <hr>
+            <% @articles.each do |article| %>
+            <div class="text-center post col-md-6 col-md-offset-3">
+                <%= link_to(article) do %>
+                     <div class="panel panel-default news-post" style="background-image: url('images/park2.jpg')">
+                        <div class="panel-body">
+                            <h1 class="post-title"><%= article.title %></h1>
+                        </div>
+                        <div class="panel-heading">
+                            <h1 class="post-meta">Posted by <%= article.author %> on <%= article.created_at.strftime('%a, %b %d') %></h1>
+                        </div>
+                    </div>
+                 <% end %>
+                <hr>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <!--Pager-->
+    <div class="col-md-8 col-md-offset-2 " >
+        <ul class="pager">
+            <li class="">
+              <%= link_to "Older Posts", articles_path, class: 'nav-link', method: :get %>
+            </li>
+        </ul>
+    </div>
+             <% end if %>
+</div>
